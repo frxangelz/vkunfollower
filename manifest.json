@@ -1,0 +1,32 @@
+{
+  "name": "vKontakte : Unfollower !",
+  "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "very simple Macro unfollower for vKontakte",
+  "homepage_url": "http://frxangelz.blogspot.com",
+  "default_locale": "en",
+  "browser_action": {
+    "default_title": "vKontakte unfollower",
+    "default_popup": "popup/browser_action.html"
+  },
+  "permissions": [
+    "background",
+    "https://*.vk.com/*",
+    "https://vk.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "inject.js"
+      ]
+    }
+  ]
+}
